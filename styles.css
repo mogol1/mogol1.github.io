@@ -1,3 +1,58 @@
 body{
-   font-size: 24px;
+    color: #FDFDFD;
+    background: url(img/bg.png);
+    margin-left: 10px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.content{
+    margin-right: 35%;
+    width: 65%;
+    float: left;
+}
+
+aside{
+    margin-left: 75%;
+    width: 25%;
+    right: 1%;
+    display: block;
+    background-color: rgba(0,0,0,0.33);
+    border-radius: 15px;
+    margin-top:20px;
+    margin-right:5px;
+    padding-top:10px;
+    padding-right: 10px;
+    padding-left: 15px;
+    position: fixed;
+}
+
+h1{
+    font-family: 'Kelly Slab', cursive;
+    font-size: 4.5em;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Graduate', cursive;
+}
+
+p{
+}
+
+footer{
+    font-style: italic;
+    text-decoration: overline;
+    font-size: 0.75em;
+    margin-top: 5px;
+}
+
+a{
+    color: #FDFDFD;
+    text-decoration: underline;
+    transition: .25s ease-in-out;
+}
+
+a:hover{
+    color: #ffc20e;
+    transition: .25s ease-in-out;
 }
