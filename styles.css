@@ -17,17 +17,19 @@ body{
 aside{
     margin-left: 75%;
     width: 25%;
-    right: 1%;
+    right: 1.25%;
     display: block;
     background-color: rgba(255,255,255,0.125);
     border-radius: 15px;
-    margin-top:20px;
-    margin-right:5px;
     padding-top:10px;
     padding-right: 10px;
-    padding-left: 15px;
-    padding-bottom: 10px;
+    padding-left: 10px;
     position: fixed;
+    font-size: 0.75em;
+}
+
+aside > p{
+    text-indent: 0;
 }
 
 h1{
@@ -36,13 +38,20 @@ h1{
     text-align: center;
 }
 
-h2{
-    font-family: 'Graduate', cursive;
+.subhead{
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Kelly Slab';
+}
+
+.section_head{
     margin-left: 10%;
+    color: #ffc20e;
+    font-family: 'Graduate', cursive;
 }
 
 p{
-    text-indent: 5mm;
+    text-indent: 10mm;
 }
 
 li{
@@ -76,6 +85,6 @@ a{
 }
 
 a:hover{
-    color: #ffc20e;
+    color: #ed1c24;
     transition: .25s ease-in-out;
 }
