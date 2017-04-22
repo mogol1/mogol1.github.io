@@ -100,25 +100,53 @@ a:hover{
     
     .content{
         width: 95%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .section_head{
+        text-align: center;
+        margin-left: 0;
     }
     
     aside{
-        display: inline;
+        display: block;
         position: static;
+        margin-left: 0px;
+        width: 90%;
+        padding-bottom: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
     
     #profile_pic{
-        float: left;
-        width: 20%;
+        width: 50%;
+        margin-bottom: 0;
+        margin-top: 10px;
     }
     
     .sidebar_text{
-        float: right;
-        width: 75%;
+        width: 90%;
         padding-right: 5px;
+    }
+    
+    aside > p{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     footer{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 535px){
+    
+    footer{
+        font-size: 2.2vw;
+        padding-bottom: 5px;
     }
 }
