@@ -26,6 +26,7 @@ aside{
     padding-left: 10px;
     position: fixed;
     font-size: 0.75em;
+    color: #FDFDFD;
 }
 
 aside > p{
@@ -93,6 +94,7 @@ a:hover{
     
     aside{
         position: absolute;
+        color: #FDFDFD;
     }
 }
 
@@ -118,6 +120,7 @@ a:hover{
         padding-bottom: 1px;
         margin-left: auto;
         margin-right: auto;
+        color: #FDFDFD;
         
     }
     
