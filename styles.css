@@ -91,7 +91,7 @@ footer{
 
 #instructions{
     display: none;
-    text-indent: none;
+    font-family: cursive; /*THIS IS A PLACEHOLDER*/
     text-align: center;
 }
 
@@ -115,7 +115,7 @@ a:hover{
 }
 
 
-/*Child selectors*/
+/*Child and Descendent selectors*/
 
 ul > li{
    list-style-type: square; 
@@ -128,14 +128,21 @@ aside > p{
 }
 
     
-.content > p{
+.content p{
     margin-left: 15px;
+}
+
+
+/*Compounded*/
+
+.work > ul:not(:last-child){
+    padding-bottom: 20px;
 }
 
 
 /************************************
   When screen too short for sidebar
-  (Short Mode)
+  (i.e. for very short windows)
 ************************************/
 
 @media screen and (max-height: 655px){
@@ -152,7 +159,7 @@ aside > p{
 
 /******************************************
   When screen not wide enough for sidebar
-  (Mobile Mode)
+  (i.e. for phones)
 ******************************************/
 
 @media screen and (max-width: 840px){
@@ -236,7 +243,7 @@ aside > p{
 
 /*****************************************
   When screen not wide enough for footer
-  (Expansion on Mobile Mode)
+  (i.e. for very narrow phones)
 *****************************************/
 
 @media screen and (max-width: 535px){

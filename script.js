@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-//Applied when website is in Mobile Mode
+//Applied when browser is too narrow for sidebar
     if($(window).width() <= 840){
     
     //Start with all dropdowns closed
