@@ -74,7 +74,7 @@ footer{
 
 
 .content{
-    margin-right: 35%;
+    margin-right: 33%;
     width: 66%;
     float: left;
 }
@@ -88,6 +88,13 @@ footer{
 
 
 /*IDs*/
+
+#instructions{
+    display: none;
+    text-indent: none;
+    text-align: center;
+}
+
 
 #profile_pic{
     width: 95%;
@@ -117,6 +124,7 @@ ul > li{
 
 aside > p{
     text-indent: 0;
+    line-height: normal;
 }
 
     
@@ -148,6 +156,17 @@ aside > p{
 @media screen and (max-width: 840px){
     
     /*Tags*/
+    
+    p{
+        text-indent: 0;
+        line-height: 125%;
+    }
+    
+    
+    li{
+        line-height: 125%;
+    }
+    
     
     aside{
         display: block;
@@ -190,6 +209,11 @@ aside > p{
     
     /*IDs*/
     
+    #instructions{
+        display: block;
+    }
+    
+    
     #profile_pic{
         width: 50%;
         margin-bottom: 0;
@@ -203,7 +227,7 @@ aside > p{
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
+    }  
     
 }
 

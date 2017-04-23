@@ -10,6 +10,10 @@
         
         <link href="https://fonts.googleapis.com/css?family=Graduate|Kelly+Slab|Work+Sans" rel="stylesheet">
         
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        
+        <script src="script.js" type="text/javascript"></script>
+        
         <title>Ryan Mogol: The Man, The Myth, The Website</title>
         
     </head>
@@ -21,38 +25,40 @@
         <h1>Ryan Mogol</h1>
         <h2 class="subhead">The Man, The Myth, The Website.</h2>
         
+        <p id="instructions">Click a section header to view that section.</p>
+        
         <div class="content">
         
             
 <!--About Me Section-->
             
-            <h2 class="section_head">About Me:</h2>
+            <h2 class="section_head" data-description="about">About Me:</h2>
             
-            <p>Hi! Thanks for visiting my website. My name is Ryan Mogol. I'm a student at <a href="http://www.umbc.edu" target="_blank"> UMBC</a>, currently pursuing a major in the Health Administration and Policy Program &#40;Administration Track&#41; and a minor in Information Systems. I also work at the Technology Support Center at UMBC. I do public relations for the Sikh Student Association at UMBC too. Right now this website is basically just an online version of my r&#233;sum&#233;, with a special infusion of my sense of humor &#40;spoiler alert: it's not actually funny.&#41; Maybe this website will stay the way it is. Maybe I'll make it something completely different. I guess we'll just have to wait and see.</p>
+            <p class="dropdown" id="about">Hi! Thanks for visiting my website. My name is Ryan Mogol. I'm a student at <a href="http://www.umbc.edu" target="_blank"> UMBC</a>, currently pursuing a major in the Health Administration and Policy Program &#40;Administration Track&#41; and a minor in Information Systems. I also work at the Technology Support Center at UMBC. I do public relations for the Sikh Student Association at UMBC too. Right now this website is basically just an online version of my r&#233;sum&#233;, with a special infusion of my sense of humor &#40;spoiler alert: it's not actually funny.&#41; Maybe this website will stay the way it is. Maybe I'll make it something completely different. I guess we'll just have to wait and see.</p>
             
             
 <!--Education Section-->
             
-            <h2 class="section_head">My Education:</h2>
+            <h2 class="section_head" data-description="education">My Education:</h2>
             
-            <p>I went to the <a href="http://www.parkschool.net/" target="_blank">Park School of Baltimore</a> for high school. Now I go to <a href="http://www.umbc.edu" target="_blank">UMBC</a> for the Health Administration and Policy Program. I'm also going after a minor in Information Systems. Hopefully I'll graduate in Spring 2019. That's the plan anyway. Fingers crossed.</p>
+            <p class="dropdown" id="education">I went to the <a href="http://www.parkschool.net/" target="_blank">Park School of Baltimore</a> for high school. Now I go to <a href="http://www.umbc.edu" target="_blank">UMBC</a> for the Health Administration and Policy Program. I'm also going after a minor in Information Systems. Hopefully I'll graduate in Spring 2019. That's the plan anyway. Fingers crossed.</p>
             
             
 <!--Skills Section-->
             
-            <h2 class="section_head">My Skills:</h2>
+            <h2 class="section_head" data-description="skills">My Skills:</h2>
             
-            <p>I'm proficent in Microsoft Office and Google's G Suite, and I can use a Mac or a PC. My typing speed is somewhere between 60-70 WPM. I also designed and built this website myself. So I guess I'm decent at HTML and CSS too. Or maybe, after seeing this website, you decided that I'm not. That's ok too &#40;you jerk.&#41; Fun fact: I can type the alphabet in 1.9 seconds. Not that anyone's counting.</p>
+            <p class="dropdown" id="skills">I'm proficent in Microsoft Office and Google's G Suite, and I can use a Mac or a PC. My typing speed is somewhere between 60-70 WPM. I also designed and built this website myself. So I guess I'm decent at HTML and CSS too. Or maybe, after seeing this website, you decided that I'm not. That's ok too &#40;you jerk.&#41; Fun fact: I can type the alphabet in 1.9 seconds. Not that anyone's counting.</p>
             
             
 <!--Experience Section-->
             
-            <h2 class="section_head">My Work Experience:</h2>
+            <h2 class="section_head" data-description="work">My Work Experience:</h2>
             
     <!--TSC Subsection-->
-            <p>Right now I work part-time at the <a href="http://doit.umbc.edu/tsc/" target="_blank">Technology Support Center &#40;TSC&#41;</a> at UMBC. It's a pretty nice job. Here's some of the things I do there:</p>
+            <p class="dropdown work">Right now I work part-time at the <a href="http://doit.umbc.edu/tsc/" target="_blank">Technology Support Center &#40;TSC&#41;</a> at UMBC. It's a pretty nice job. Here's some of the things I do there:</p>
             
-            <ul>
+            <ul class="dropdown work">
                 <li>I provide in person and online tech support to members of the UMBC community.</li>
                 
                 <li>I answer the phone if it rings. Usually it's someone who needs help with a computer. So I help them.</li>
@@ -67,9 +73,9 @@
             <br>
             
     <!--Jemicy Subsection-->
-            <p> For my high school senior project, I did an internship at <a href="http://www.jemicyschool.org" target="_blank">Jemicy School</a>. It's a school for kids with dyslexia and other language-based learning differences. It's pretty cool. Here's what I did while I was there:</p>
+            <p class="dropdown work"> For my high school senior project, I did an internship at <a href="http://www.jemicyschool.org" target="_blank">Jemicy School</a>. It's a school for kids with dyslexia and other language-based learning differences. It's pretty cool. Here's what I did while I was there:</p>
             
-            <ul>
+            <ul class="dropdown work">
                 <li>I taught fifth grade kids how to use Google Drive, Google Docs, and Google Slides so they could make written and visual reports.</li>
                 
                 <li>I reviewed the kids' written work and gave them feedback. I also made suggestions to them on how they can improve their writing.</li>
@@ -92,7 +98,7 @@
             
             <p class="sidebar_text">That's me and my cat, Tiny. She's called that because she's tiny. If you want to contact her &#40;or me for some reason,&#41; you can do that at <a href="mailto:ryan@ryanmogol.com">ryan&#64;ryanmogol.com</a>.</p>
             
-            <p>This website was hand-coded by me. If you want to see this website's code for some reason, it's <a href="https://github.com/mogol1/mogol1.github.io" target="_blank">here</a>. It's not really anything special.</p>
+            <p class="sidebar_text">This website was hand-coded by me. If you want to see this website's code for some reason, it's <a href="https://github.com/mogol1/mogol1.github.io" target="_blank">here</a>. It's not really anything special.</p>
             
         </aside>
         
