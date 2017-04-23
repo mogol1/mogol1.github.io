@@ -3,4 +3,4 @@ Personal Website
 
 This repository contains the source for my website, ryanmogol.com
 
-It is under construction
+It is under construction.
