@@ -98,7 +98,7 @@ a:hover{
     }
 }
 
-@media screen and (max-width: 815px){
+@media screen and (max-width: 815px) and (orientation: portrait){
     
     .content{
         width: 95%;
