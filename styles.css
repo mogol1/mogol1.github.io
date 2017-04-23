@@ -155,7 +155,7 @@ aside > p{
   (Mobile Mode)
 ******************************************/
 
-@media screen and (max-width: 840px) or ( (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)){
+@media screen and (max-width: 840px){
     
     /*Tags*/
     
