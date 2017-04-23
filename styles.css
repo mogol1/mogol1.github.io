@@ -90,7 +90,7 @@ a:hover{
     transition: .25s ease-in-out;
 }
 
-@media only screen and (max-height: 655px){
+@media screen and (max-height: 655px){
     
     aside{
         position: absolute;
@@ -98,7 +98,7 @@ a:hover{
     }
 }
 
-@media only screen and (max-width: 815px){
+@media screen and (max-width: 815px){
     
     .content{
         width: 95%;
@@ -146,7 +146,7 @@ a:hover{
     }
 }
 
-@media only screen and (max-width: 535px){
+@media screen and (max-width: 535px){
     
     footer{
         font-size: 2.2vw;
