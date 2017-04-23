@@ -1,18 +1,39 @@
+/**********
+  Default  
+**********/
+
+/*Tags*/
+
 body{
     color: #FDFDFD;
     background: url(img/background.png);
     font-family: 'Work Sans', sans-serif;
 }
 
-.content{
-    margin-right: 35%;
-    width: 65%;
-    float: left;
+
+h1{
+    font-family: 'Kelly Slab', cursive;
+    font-size: 4.5em;
+    text-align: center;
 }
 
-.content > p{
-    margin-left: 15px;
+
+p{
+    text-indent: 10mm;
 }
+
+
+a{
+    color: #FDFDFD;
+    text-decoration: underline;
+    transition: .25s ease-in-out;
+}
+
+
+li{
+    padding-bottom: 10px;
+}
+
 
 aside{
     margin-left: 75%;
@@ -29,45 +50,6 @@ aside{
     color: #FDFDFD;
 }
 
-aside > p{
-    text-indent: 0;
-}
-
-h1{
-    font-family: 'Kelly Slab', cursive;
-    font-size: 4.5em;
-    text-align: center;
-}
-
-.subhead{
-    text-align: center;
-    font-size: 2em;
-    font-family: 'Kelly Slab';
-}
-
-.section_head{
-    margin-left: 25px;
-    color: #ffc20e;
-    font-family: 'Graduate', cursive;
-}
-
-p{
-    text-indent: 10mm;
-}
-
-li{
-    padding-bottom: 10px;
-}
-
-#profile_pic{
-    width: 95%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    
-}
 
 footer{
     font-style: italic;
@@ -79,38 +61,86 @@ footer{
     padding-bottom: 10px;
 }
 
-a{
-    color: #FDFDFD;
-    text-decoration: underline;
-    transition: .25s ease-in-out;
+
+/*Classes*/
+
+.subhead{
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Kelly Slab';
 }
+
+
+.content{
+    margin-right: 35%;
+    width: 65%;
+    float: left;
+}
+
+
+.section_head{
+    margin-left: 25px;
+    color: #ffc20e;
+    font-family: 'Graduate', cursive;
+}
+
+
+/*IDs*/
+
+#profile_pic{
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
+}
+
+
+/*Pseudoclasses*/
 
 a:hover{
     color: #ed1c24;
     transition: .25s ease-in-out;
 }
 
+
+/*Child selectors*/
+
+aside > p{
+    text-indent: 0;
+}
+
+    
+.content > p{
+    margin-left: 15px;
+}
+
+
+/************************************
+  When screen too short for sidebar
+************************************/
+
 @media screen and (max-height: 655px){
+    
+    /*Tags*/
     
     aside{
         position: absolute;
         color: #FDFDFD;
     }
+    
 }
 
-@media screen and (max-width: 815px) and (orientation: portrait){
+
+/******************************************
+  When screen not wide enough for sidebar
+******************************************/
+
+@media screen and (max-width: 815px){
     
-    .content{
-        width: 95%;
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .section_head{
-        text-align: center;
-        margin-left: 0;
-    }
+    /*Tags*/
     
     aside{
         display: block;
@@ -121,8 +151,37 @@ a:hover{
         margin-left: auto;
         margin-right: auto;
         color: #FDFDFD;
-        
     }
+    
+    
+    footer{
+        width: 100%;
+    }
+    
+    
+    /*Classes*/
+    
+    .content{
+        width: 95%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    .section_head{
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    
+    .sidebar_text{
+        width: 90%;
+        padding-right: 5px;
+    }
+    
+    
+    /*IDs*/
     
     #profile_pic{
         width: 50%;
@@ -130,10 +189,8 @@ a:hover{
         margin-top: 10px;
     }
     
-    .sidebar_text{
-        width: 90%;
-        padding-right: 5px;
-    }
+    
+    /*Child selectors*/
     
     aside > p{
         display: block;
@@ -141,15 +198,24 @@ a:hover{
         margin-right: auto;
     }
     
-    footer{
-        width: 100%;
-    }
 }
 
+
+/*****************************************
+  When screen not wide enough for footer
+*****************************************/
+
 @media screen and (max-width: 535px){
+    
+    /*Tags*/
     
     footer{
         font-size: 2.2vw;
         padding-bottom: 5px;
     }
+    
 }
+
+
+
+/*By Ryan Mogol 2017*/
