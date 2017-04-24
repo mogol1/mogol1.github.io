@@ -251,7 +251,7 @@ aside > p{
 
 /*****************************************
   When screen not wide enough for footer
-  (i.e. for very narrow phones)
+  (i.e. for phones)
 *****************************************/
 
 @media screen and (max-width: 535px){
@@ -263,6 +263,18 @@ aside > p{
         padding-bottom: 5px;
     }
     
+}
+
+
+/************************************************
+  When screen not wide enough for dividing line
+  (i.e. for narrow phones)
+************************************************/
+
+@media screen and (max-width: 349px){
+    #instructions{
+        width: 85%;
+    }
 }
 
 
