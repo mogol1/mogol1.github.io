@@ -12,7 +12,6 @@ $(document).ready(function() {
             $("#" + id).slideToggle();
             $("." + id).slideToggle();
         });
-        
     }; 
 });
 

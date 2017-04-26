@@ -80,7 +80,7 @@ footer{
 }
 
 
-.content > .section_head{
+.section_head{
     margin-left: 25px;
     color: #ffc20e;
     font-family: 'Graduate', cursive;
@@ -104,14 +104,6 @@ footer{
 }
 
 
-#more_sidebar{
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
-    display: none;
-}
-
-
 #profile_pic{
     width: 95%;
     display: block;
@@ -121,7 +113,6 @@ footer{
     border-radius: 10px;
     
 }
-
 
 
 /*Pseudoclasses*/
@@ -139,7 +130,7 @@ ul > li{
 }
 
 
-.sidebar_text{
+aside > p{
     text-indent: 0;
     line-height: normal;
 }
@@ -174,10 +165,10 @@ ul > li{
 }
 
 
-/*************************************
-  When screen too narrow for sidebar
+/******************************************
+  When screen not wide enough for sidebar
   (i.e. for phones)
-*************************************/
+******************************************/
 
 @media screen and (max-width: 840px){
     
@@ -240,11 +231,6 @@ ul > li{
     }
     
     
-    #more_sidebar{
-        display: block;
-    }
-    
-    
     #profile_pic{
         width: 50%;
         margin-bottom: 0;
@@ -263,10 +249,10 @@ ul > li{
 }
 
 
-/************************************
-  When screen too narrow for footer
+/*****************************************
+  When screen not wide enough for footer
   (i.e. for phones)
-************************************/
+*****************************************/
 
 @media screen and (max-width: 535px){
     
@@ -280,10 +266,10 @@ ul > li{
 }
 
 
-/*******************************************
-  When screen too narrow for dividing line
+/************************************************
+  When screen not wide enough for dividing line
   (i.e. for narrow phones)
-*******************************************/
+************************************************/
 
 @media screen and (max-width: 375px){
     #instructions{
