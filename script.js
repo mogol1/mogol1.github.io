@@ -5,6 +5,9 @@ $(document).ready(function() {
     
     //Start with all dropdowns closed
         $('.dropdown').toggle();
+        
+    //Start with sidebar text saying 'show'
+        $('#sidebar_hide_text').css('display', 'none');
 
     //Open a dropdown when it's clicked
         $('.section_head').click(function() {
@@ -13,7 +16,12 @@ $(document).ready(function() {
             $("." + id).slideToggle();
         });
         
+        $('#more_sidebar').click(function() {
+            $('#sidebar_hide_text').css('display', 'block');
+            $('sidebar_show_text').css('display', 'none');
+        });
     }; 
+    
 });
 
 
