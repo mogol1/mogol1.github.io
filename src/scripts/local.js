@@ -133,7 +133,7 @@ function introduction() {
 		function remWelcome() {
 			$(".welcomeback_wrapper").css("background-color", 'transparent');
 			$(".welcomeback").css("margin-top", "200%");
-			
+
 			setTimeout(function() {
 				$(".welcomeback_wrapper").remove();
 			}, 400);
@@ -145,22 +145,22 @@ function introduction() {
 	}
 
 	var data = localStorage;
-		
+
 	if (!data.isIntroduced) {
 
 		$("#start_popup").css("display", "flex");
 
 	} else {
-		
+
 		$("#start_popup").remove();
 
 		if (data.links && data.links.length > 0) $(".interface .linkblocks").css("visibility", "visible");
-		
+
 		welcomeback(data.welcomeback);
 	}
 
 	//la marge des popups en pourcentages
-	var margin = 0; 
+	var margin = 0;
 	//init le premier counter avec le style actif
 	var premier = $("div.counter span:first-child")[0];
 	$(premier).addClass("actif");
@@ -177,7 +177,7 @@ function introduction() {
 			$(".interface .linkblocks").css("visibility", 'visible');
 			quickLinks();
 		}
-		
+
 		setTimeout(function() {
 			$("#start_popup").remove();
 			$(".interface .linkblocks").css("opacity", 1)
@@ -289,7 +289,7 @@ function clock() {
 
 		function is12hours(x) {
 
-			if (x > 12) x -= 12; 
+			if (x > 12) x -= 12;
 			if (x === 0) x = 12;
 
 			return x;
@@ -310,7 +310,7 @@ function clock() {
 	//settings event
 	$(".12hour input").change(function() {
 
-		//change le format 
+		//change le format
 		if ($(this)[0].checked) {
 
 			format = 12;
@@ -348,16 +348,16 @@ function greetings() {
 	var m;
 
 	if (h >= 6 && h < 12) {
-		m = tradThis('Good Morning'); 
+		m = tradThis('Good Morning Ryan');
 
 	} else if (h >= 12 && h < 17) {
-		m = tradThis('Good Afternoon');
+		m = tradThis('Good Afternoon Ryan');
 
 	} else if (h >= 17 && h < 23) {
-		m = tradThis('Good Evening');
+		m = tradThis('Good Evening Ryan');
 
 	} else if (h >= 23 && h < 6) {
-		m = tradThis('Good Night');
+		m = tradThis('Good Night Ryan');
 	}
 
 	$('.greetings').text(m);
@@ -410,7 +410,7 @@ function quickLinks() {
 			$(".block").addClass("wiggly");
 			$(this).focus();
 
-			canRemove = true;	
+			canRemove = true;
 		}
 
 		function stopwiggle() {
@@ -481,7 +481,7 @@ function quickLinks() {
 			//enleve le html du block
 			var block = $(".linkblocks")[0].children[i];
 			$(block).addClass("removed");
-			
+
 			setTimeout(function() {
 
 				$(block).remove();
@@ -491,14 +491,14 @@ function quickLinks() {
 					searchbarFlexControl(data.searchbar, 0);
 				}
 			}, 200);
-			
-			
+
+
 			//coupe en 2 et concat sans le link a remove
 			function ejectIntruder(arr) {
-				
+
 				return arr.slice(0, i).concat(arr.slice(i + 1));
 			}
-			
+
 			var links = storagelinks;
 			localStorage.links = JSON.stringify(ejectIntruder(links));
 		}
@@ -507,7 +507,7 @@ function quickLinks() {
 		//event de suppression de block
 		//prend l'index du parent du .remove clické
 		$(".linkblocks").on("click", ".remove", function() {
-			
+
 			var index = $(this).parent().parent().parent().index();
 			(canRemove ? removeblock(index) : "");
 		});
@@ -591,7 +591,7 @@ function quickLinks() {
 				$(".linkblocks").css("visibility", "visible");
 				searchbarFlexControl(data.searchbar, 1);
 			}
-			
+
 			if (!full) {
 
 				localStorage.links = JSON.stringify(arr);
@@ -633,7 +633,7 @@ function quickLinks() {
 				//remet a zero les inputs
 				$(".addlink input[name='title']").val("");
 				$(".addlink input[name='url']").val("");
-			}	
+			}
 		} else {
 			if (url.length > 0) submissionError(url);
 		}
@@ -659,7 +659,7 @@ function weather() {
 
 	//init la requete;
 	var req;
-	
+
 	function dataHandling(data) {
 
 		//si le soleil est levé, renvoi jour
@@ -681,7 +681,7 @@ function weather() {
 		function imgId(id) {
 			if (id >= 200 && id <= 232) {
 				return "thunderstorm"
-			} 
+			}
 			else if (id >= 300 && id <= 321) {
 				return "showerrain"
 			}
@@ -738,11 +738,11 @@ function weather() {
 
 		$(".w_desc_temp").text(dtemp);
 		$(".w_widget_temp").text(wtemp);
-		
+
 		if (data.icon) {
 
 			$(".w_icon").attr("src", data.icon);
-			
+
 		} else {
 			//pour l'icone
 			var d_n = dayOrNight(data.sys.sunset, data.sys.sunrise);
@@ -777,7 +777,7 @@ function weather() {
 		request_w.open('GET', url, true);
 
 		request_w.onload = function() {
-			
+
 			var data = JSON.parse(this.response);
 
 			if (request_w.status >= 200 && request_w.status < 400) {
@@ -808,7 +808,7 @@ function weather() {
 		localStorage.weather_city = "Paris";
 		localStorage.weather_unit = "metric";
 	}
- 
+
 	function apply() {
 
 		//enleve les millisecondes
@@ -902,7 +902,7 @@ function weather() {
 		}
 
 		weatherRequest(req);
-		
+
 		localStorage.weather_unit = req.unit;
 	}
 
@@ -925,7 +925,7 @@ function weather() {
 
 				$(".change_weather .city").css("display", "none");
 				$(that).removeAttr("disabled");
-				
+
 			}, (refused) => {
 
 				//désactive geolocation if refused
@@ -953,7 +953,7 @@ function weather() {
 			updateCity();
 			slow(this);
 		}
-		
+
 	});
 
 	$('.change_weather input[name="city"]').on('keypress', function(e) {
@@ -1042,14 +1042,14 @@ function optimizedBgURL(source, blur) {
 		else if (source.includes("/large/")) {
 			dirFrom = "large";
 		}
-		
+
 		dirTo = "blur";
 
 	} else if (parseInt(blur) < 5 || blur === "none") {
 
 		dirFrom = "blur";
 
-		if (res > 950) {	
+		if (res > 950) {
 			dirTo = "large";
 		} else {
 			dirTo = "default";
@@ -1057,7 +1057,7 @@ function optimizedBgURL(source, blur) {
 	}
 
 	if (res > 950 && source.includes("/default/")) {
-		
+
 		dirFrom = "default";
 		dirTo = "large";
 	}
@@ -1100,7 +1100,7 @@ function initBackground() {
 
 	//si custom, faire le blob
 	if (data.background_type === "custom") {
-		
+
 		var blob = (data.background_blob ? JSON.parse(data.background_blob) : console.log("pas de blob"));
 		applyBackground(blob(), type, blur);
 
@@ -1108,12 +1108,12 @@ function initBackground() {
 
 		applyBackground(image, type, blur);
 	}
-	
+
 
 	//remet les transitions du blur
 	setTimeout(function() {
 		$(".background").css("transition", "filter .2s");
-	}, 200);	
+	}, 200);
 }
 
 function blob(donnee, set) {
@@ -1332,7 +1332,7 @@ function darkmode(choix) {
 			urltouse = 'src/images/backgrounds/default/ios13_dark.jpg';
 
 		} else {
-			
+
 			modeurl = "ios13_light";
 			actual = "ios13_dark";
 			urltouse = 'src/images/backgrounds/default/ios13_light.jpg';
@@ -1410,7 +1410,7 @@ function darkmode(choix) {
 
 		if (dd === "system") {
 			applyDark(true, true);
-		}	
+		}
 	}
 
 	function changeDarkMode() {
@@ -1469,7 +1469,7 @@ function searchbarFlexControl(activated, linkslength) {
 			dom.addClass("removed");
 			dom.removeClass("shown");
 		}
-		
+
 	} else {
 
 		if (activated) {
@@ -1498,16 +1498,16 @@ function searchbar() {
 			//pour animer un peu
 			$("#searchbar_option .param hr, .popup5 hr").css("display", "block");
 			$("#choose_searchengine").css("display", 'flex');
-			
+
 			searchbarFlexControl(activated, (links ? links.length : 0));
-			
+
 		} else {
 
 			localStorage.searchbar = false;
 
 			//pour animer un peu
 			$("#choose_searchengine, #searchbar_option hr, .popup5 hr").css("display", "none");
-			
+
 			searchbarFlexControl(activated, (links ? links.length : 0));
 		}
 	}
@@ -1591,7 +1591,7 @@ function actualizeStartupOptions() {
 
 	var data = localStorage;
 
-	//default background 
+	//default background
 	$(".choosable_backgrounds .imgpreview img").each(function() {
 
 		//compare l'url des preview avec celle du background
@@ -1617,16 +1617,16 @@ function actualizeStartupOptions() {
 	} else {
 		$(".darkmode select.theme").val("disable");
 	}
-	
 
-	
+
+
 	//weather city input
 	if (data.weather_city) {
 		$(".change_weather input[name='city']").attr("placeholder", data.weather_city);
 	} else {
 		$(".change_weather input[name='city']").attr("placeholder", "Paris");
 	}
-	
+
 
 	//check geolocalisation
 	//enleve city
@@ -1645,14 +1645,14 @@ function actualizeStartupOptions() {
 		$(".units input")[0].checked = false;
 	}
 
-	
+
 	//searchbar switch et select
 	$(".activate_searchbar input")[0].checked = data.searchbar;
 
 	setTimeout(() => {
       if (data.searchbar) $(".interface input.searchbar").focus();
     }, 100);
-	
+
 
 	if (data.searchbar_engine) {
 		$(".choose_search")[0].value = data.searchbar_engine;
@@ -1668,14 +1668,14 @@ function actualizeStartupOptions() {
 	} else {
 		$(".12hour input")[0].checked = false;
 	}
-		
+
 
 	//langue
 	if (data.lang) {
 		$(".lang")[0].value = data.lang;
 	} else {
 		$(".lang")[0].value = "en";
-	}			
+	}
 }
 
 function mobilecheck() {
@@ -1688,7 +1688,7 @@ function mobilecheck() {
 $(".showSettings button").click(function() {
 
 	$(this).toggleClass("shown");
-	
+
 	$(".settings").css("display", "block");
 	$(".settings").toggleClass("shown");
 	$(".interface").toggleClass("pushed");
