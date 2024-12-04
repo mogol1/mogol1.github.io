@@ -1,4 +1,4 @@
 # mogol1.github.io
 Personal Website
 
-This repository contains the source for my website, [ryanmogol.com](http://ryanmogol.com).
+This repository contains the source for my website, [ryanmogol.com](http://ryanmogol.com). There's nothing exciting in it.
